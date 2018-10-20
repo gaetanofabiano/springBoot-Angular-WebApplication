@@ -1,0 +1,30 @@
+
+
+<p>
+  
+    <mat-label>Company Name</mat-label>
+    <input [(ngModel)]="name" matInput placeholder="Company name" [name]='name'>
+  
+  
+</p>
+<p>
+    <mat-label>Number of Flight</mat-label>
+    <input  [(ngModel)]="numberOfFligths" matInput type="number" placeholder="Number Of flight must be grether than 0" min="10" [name]='numberOfFligths'>
+   
+ 
+ 
+</p>
+<p>
+    <mat-label>Probability of Delayed</mat-label>
+    <input [(ngModel)]="probabilityOfDelayed" matInput type="number" placeholder="Probability of Delayed %" min="1" max="50" [name]='probabilityOfDelayed'>
+    
+ 
+</p>
+<p>
+    <mat-label>Probability of Cancelled</mat-label>
+    <input [(ngModel)]="probabilityOfCancelled" matInput type="number" placeholder="Probability of Cancelled % (Cancelled % +Delayed% < 100%)" min="10"max="50" [name]='probabilityOfCancelled'>
+    
+  
+</p>
+
+<p><button mat-button disabled="isValid()" (click)="genereateScheduler()" >Generate</button></p>

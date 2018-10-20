@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+   
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu color="warn" #menu="matMenu">
+      <button [routerLink] ="['/flight']" mat-menu-item>
+        <mat-icon>flight</mat-icon>
+        <span>Flight Scheduler View</span>
+      </button>
+      <button [routerLink] ="['/scheduler']"mat-menu-item>
+        <mat-icon>av_timer</mat-icon>
+        <span>Flight Scheduler Creator</span>
+      </button>
+    </mat-menu>
+
+    <button mat-button>About</button>
+    <button mat-button>Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+
+
+
